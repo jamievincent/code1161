@@ -11,18 +11,23 @@ import platform
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
+#I think this is a list of words 
 some_words = ['what', 'does', 'this', 'line', 'do', '?']
 
+#I think this looks for "word" from the list of words above
 for word in some_words:
     print(word)
 
+#I think this looks for "x" from the list of words above
 for x in some_words:
     print(x)
 
+#I think this prints the list of words
 print(some_words)
 
+#I think this sees if the list contains more than 3 words
 if len(some_words) > 3:
-    print('some_words contains more than 3 words')
+    print('some_words contains more than 3 words') #this will print "some_words contains more than 3 words"
 
 def usefulFunction():
     """

@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week we learnt how to print "hello world", which was pretty straight forward. Most of the tutorial was spent downloading software. I still don't completely undertsnd python, but I assume I will in the next couple of weeks.

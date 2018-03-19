@@ -12,7 +12,17 @@ def loop_ranger(start, stop=None, step=1):
 
     Do this using any method apart from just using range()
     """
-    pass
+    #count = 0
+    #while(count<10):
+        #print(count)
+        #count = count + 3
+    count = start
+    count_list = []
+    while(count<stop):
+        count_list.append(count)
+        count = count + step
+    return count_list
+
 
 
 def lone_ranger(start, stop, step):
@@ -20,16 +30,32 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    pass
+
+    count = 0
+    count_list = []
+    for count in range(start,stop,step):
+        count_list.append(count)
+    return(count_list)
+
+        
 
 
-def two_step_ranger(start, stop):
+def two_step_ranger(start, stop,):
     """Make a range that steps by 2.
 
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    pass
+    #step = 2
+    #for count in range(start,stop,step):
+        #print(count)
+    count_list = []
+    step = 2
+    while(start<stop):
+        count_list.append(start)
+        start = start + step
+    return count_list
+
 
 
 def stubborn_asker(low, high):
@@ -38,7 +64,12 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
     """
-    pass
+    number = int(input("Please enter a number: "))
+    if 10000 <= number <= 30000:
+        print("Please enter another number")
+    else:
+        print("This is a good number")
+    
 
 
 def not_number_rejector(message):
@@ -48,7 +79,15 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    pass
+    while True:
+        try:
+            userInput = int(input(message))       
+        except ValueError:
+            print("Not an integer! Try again.")
+            continue
+        else:
+            return userInput 
+            break 
 
 
 def super_asker(low, high):
@@ -57,7 +96,15 @@ def super_asker(low, high):
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
     """
-    pass
+    number = (input("Please enter a number: "))
+    if 10000 <= number <= 30000:
+        print("Please enter another number")
+    else:
+        print("This is a good number")
+    if number.isdigit():
+        return number
+    else:
+        print("Please enter a NUMBER")
 
 
 if __name__ == "__main__":
