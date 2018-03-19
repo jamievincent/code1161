@@ -27,7 +27,8 @@ def binary_search(low, high, actual_number):
       (You should remove them from the file, not comment them out, the
       tests aren't that smart yet.)
     """
-
+    low = 0
+    high = 10
     return {"guess": guess, "tries": tries}
 
 
