@@ -40,7 +40,7 @@ def lone_ranger(start, stop, step):
         
 
 
-def two_step_ranger(start, stop,):
+def two_step_ranger(start, stop):
     """Make a range that steps by 2.
 
     Sometimes you want to hide complexity.
@@ -64,11 +64,22 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
     """
-    number = int(input("Please enter a number: "))
-    if 10000 <= number <= 30000:
-        print("Please enter another number")
-    else:
-        print("This is a good number")
+
+    # number = int(input("Please enter a number: "))
+    # if 10000 <= number <= 30000:
+    #     print("Please enter another number")
+    # else:
+    #     print("This is a good number")
+    while True:
+        number = int(input("Enter a number between {} and {}".format(low,high)))
+        print(number)
+        if low < number < high:
+            print("That is a good number")
+            return number
+        else: 
+            print("try again")
+
+    
     
 
 
@@ -81,13 +92,11 @@ def not_number_rejector(message):
     """
     while True:
         try:
-            userInput = int(input(message))       
+            userInput = int(input(message))
+            return userInput   
         except ValueError:
             print("Not an integer! Try again.")
-            continue
-        else:
-            return userInput 
-            break 
+    
 
 
 def super_asker(low, high):
@@ -96,15 +105,17 @@ def super_asker(low, high):
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
     """
-    number = (input("Please enter a number: "))
-    if 10000 <= number <= 30000:
-        print("Please enter another number")
-    else:
-        print("This is a good number")
-    if number.isdigit():
-        return number
-    else:
-        print("Please enter a NUMBER")
+    while True:
+        try:
+            userInput = int(input("Enter a number: ")) 
+            if low < userInput < high:
+                print("That is a good number")
+                return userInput      
+        except ValueError:
+            print("Not an integer! Try again.")
+            
+        
+
 
 
 if __name__ == "__main__":
