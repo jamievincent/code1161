@@ -90,12 +90,23 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    while True:
+    # while True:
+    #     try:
+    #         userInput = int(input(message))
+    #         return userInput   
+    #     except ValueError:
+    #         print("Not an integer! Try again.")
+    keep_asking = True
+    while keep_asking == True
+        Vn = None
+        Vstr = input("please enter a number")
         try:
-            userInput = int(input(message))
-            return userInput   
-        except ValueError:
-            print("Not an integer! Try again.")
+            Vn = float(Vstr)
+            keep_asking = False
+        except:
+            keep_asking = True
+    return "correct"
+
     
 
 
@@ -105,14 +116,19 @@ def super_asker(low, high):
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
     """
-    while True:
+    # while True:
+    #     try:
+    #         userInput = int(input("Enter a number: ")) 
+    #         if low < userInput < high:
+    #             print("That is a good number")
+    #             return userInput      
+    #     except ValueError:
+    #         print("Not an integer! Try again.")
+    keep_asking = True
+    while keep_asking == True
+        Vn = None
+        Vstr = input("please enter a number between " + str(low) + " and " + str(high) + " :")
         try:
-            userInput = int(input("Enter a number: ")) 
-            if low < userInput < high:
-                print("That is a good number")
-                return userInput      
-        except ValueError:
-            print("Not an integer! Try again.")
             
         
 
