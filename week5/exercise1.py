@@ -19,17 +19,40 @@ you'll need to figure out for yourself what to do.
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
 # move on, and eventually delete this function. (And this comment!)
-def do_bunch_of_bad_things():
-    print("Getting ready to start in 9")
-    print("Getting ready to start in 8")
-    print("Getting ready to start in 7")
-    print("Getting ready to start in 6")
-    print("Getting ready to start in 5")
-    print("Getting ready to start in 4")
-    print("Getting ready to start in 3")
-    print("Getting ready to start in 2")
-    print("Getting ready to start in 1")
-    print("Let's go!")
+def do_bunch_of_bad_things(message, start, stop, completion_message):
+    # for i in range(start, (stop-1)):
+    #     print("Getting ready to start in " + i)
+    # for i in range (stop)
+    #     print("Let's go!")
+
+    #while number < 10:
+        #return ("Getting ready to start in " + number)
+    # print("Getting ready to start in 9")
+    # print("Getting ready to start in 8")
+    # print("Getting ready to start in 7")
+    # print("Getting ready to start in 6")
+    # print("Getting ready to start in 5")
+    # print("Getting ready to start in 4")
+    # print("Getting ready to start in 3")
+    # print("Getting ready to start in 2")
+    # print("Getting ready to start in 1")
+
+    countdown_messages = []
+    if start > stop:
+        countdown = start
+        while countdown >= stop:
+            countdown = countdown - 1
+            result = message + " " + str(countdown)
+            countdown_messages.append(result)
+    else:
+        countdown = stop
+        while countdown > start:
+            countdown = countdown - 1
+            result = message + " " + str(countdown)
+            countdown_messages.append(result)
+    countdown_messages.append(completion_message)  
+    return countdown_messages
+    
 
     triangle = {"base": 3, "height": 4}
     triangle["hypotenuse"] = triangle["base"]**2 + triangle["height"]**2
@@ -49,7 +72,23 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    pass
+    countdown_messages = []
+    if start > stop:
+        countdown = start
+        while countdown >= stop:
+            countdown = countdown - 1
+            result = message + " " + str(countdown)
+            countdown_messages.append(result)
+    else:
+        countdown = stop
+        while countdown > start:
+            countdown = countdown - 1
+            result = message + " " + str(countdown)
+            countdown_messages.append(result)
+    countdown_messages.append(completion_message)  
+    return countdown_messages          
+
+
 
 
 # TRIANGLES

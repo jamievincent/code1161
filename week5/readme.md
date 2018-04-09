@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This weeks exercises were also very difficult and I found it really hard to understand what I was actually meant to be doing for the tasks. For the first exercise it was really hard to work out whether I was doing the right thing for the tasks and I found it difficult to understand the instructions. For the second exercise I had absolutley no idea what to do. 

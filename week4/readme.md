@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This weeks exercises were realy hard. The only part I understand is the first section from exercise 1 where we get data from json. The rest of the exercise I don't understand. I don't get how to import data from the url and I am also really confused about the api key and how to use it. 
