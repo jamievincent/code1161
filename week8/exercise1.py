@@ -132,10 +132,14 @@ def make_filler_text_dictionary():
     """
     
     import requests
-    words = {}
-    url = "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength={}&maxLength={}limit=1"
-    r = requests.get(url)
-    r.json()
+    word_dictionary = {}
+    for number in range(3, 8):
+        word_dictionary[number] = []
+        for word in range(3):
+            url = "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength={}&maxLength={}&limit=1"
+            new_word = requests.get(url).text
+            word_dictionary[number].append(new_word)
+    return word_dictionary
 
 
 def random_filler_text(number_of_words=200):
